@@ -96,41 +96,41 @@ static ofVec3f ofVec3fFromObject(ofxDuktape& duk, duk_idx_t i) {
 }
 
 ofxDukBindings::ofxDukBindings(ofxDuktape& duk): duk(duk) {
-    ofAddListener(ofEvents().update, this, &ofxDukBindings::onUpdate);
-    ofAddListener(ofEvents().draw, this, &ofxDukBindings::onDraw);
-    
-    ofAddListener(ofEvents().mouseMoved, this, &ofxDukBindings::onMouseEvent);
-    ofAddListener(ofEvents().mousePressed, this, &ofxDukBindings::onMouseEvent);
-    ofAddListener(ofEvents().mouseReleased, this, &ofxDukBindings::onMouseEvent);
-    ofAddListener(ofEvents().mouseEntered, this, &ofxDukBindings::onMouseEvent);
-    ofAddListener(ofEvents().mouseExited, this, &ofxDukBindings::onMouseEvent);
-    ofAddListener(ofEvents().mouseDragged, this, &ofxDukBindings::onMouseEvent);
-    ofAddListener(ofEvents().mouseScrolled, this, &ofxDukBindings::onMouseEvent);
-    
-    ofAddListener(ofEvents().keyPressed, this, &ofxDukBindings::onKeyEvent);
-    ofAddListener(ofEvents().keyReleased, this, &ofxDukBindings::onKeyEvent);
-
-    ofAddListener(ofEvents().fileDragEvent, this, &ofxDukBindings::onDragEvent);
-    ofAddListener(ofEvents().messageEvent, this, &ofxDukBindings::onMessageEvent);
+//    ofAddListener(ofEvents().update, this, &ofxDukBindings::onUpdate);
+//    ofAddListener(ofEvents().draw, this, &ofxDukBindings::onDraw);
+//
+//    ofAddListener(ofEvents().mouseMoved, this, &ofxDukBindings::onMouseEvent);
+//    ofAddListener(ofEvents().mousePressed, this, &ofxDukBindings::onMouseEvent);
+//    ofAddListener(ofEvents().mouseReleased, this, &ofxDukBindings::onMouseEvent);
+//    ofAddListener(ofEvents().mouseEntered, this, &ofxDukBindings::onMouseEvent);
+//    ofAddListener(ofEvents().mouseExited, this, &ofxDukBindings::onMouseEvent);
+//    ofAddListener(ofEvents().mouseDragged, this, &ofxDukBindings::onMouseEvent);
+//    ofAddListener(ofEvents().mouseScrolled, this, &ofxDukBindings::onMouseEvent);
+//
+//    ofAddListener(ofEvents().keyPressed, this, &ofxDukBindings::onKeyEvent);
+//    ofAddListener(ofEvents().keyReleased, this, &ofxDukBindings::onKeyEvent);
+//
+//    ofAddListener(ofEvents().fileDragEvent, this, &ofxDukBindings::onDragEvent);
+//    ofAddListener(ofEvents().messageEvent, this, &ofxDukBindings::onMessageEvent);
 }
 
 ofxDukBindings::~ofxDukBindings() {
-    ofRemoveListener(ofEvents().update, this, &ofxDukBindings::onUpdate);
-    ofRemoveListener(ofEvents().draw, this, &ofxDukBindings::onDraw);
-    
-    ofRemoveListener(ofEvents().mouseMoved, this, &ofxDukBindings::onMouseEvent);
-    ofRemoveListener(ofEvents().mousePressed, this, &ofxDukBindings::onMouseEvent);
-    ofRemoveListener(ofEvents().mouseReleased, this, &ofxDukBindings::onMouseEvent);
-    ofRemoveListener(ofEvents().mouseEntered, this, &ofxDukBindings::onMouseEvent);
-    ofRemoveListener(ofEvents().mouseExited, this, &ofxDukBindings::onMouseEvent);
-    ofRemoveListener(ofEvents().mouseDragged, this, &ofxDukBindings::onMouseEvent);
-    ofRemoveListener(ofEvents().mouseScrolled, this, &ofxDukBindings::onMouseEvent);
-    
-    ofRemoveListener(ofEvents().keyPressed, this, &ofxDukBindings::onKeyEvent);
-    ofRemoveListener(ofEvents().keyReleased, this, &ofxDukBindings::onKeyEvent);
-    
-    ofRemoveListener(ofEvents().fileDragEvent, this, &ofxDukBindings::onDragEvent);
-    ofRemoveListener(ofEvents().messageEvent, this, &ofxDukBindings::onMessageEvent);
+//    ofRemoveListener(ofEvents().update, this, &ofxDukBindings::onUpdate);
+//    ofRemoveListener(ofEvents().draw, this, &ofxDukBindings::onDraw);
+//
+//    ofRemoveListener(ofEvents().mouseMoved, this, &ofxDukBindings::onMouseEvent);
+//    ofRemoveListener(ofEvents().mousePressed, this, &ofxDukBindings::onMouseEvent);
+//    ofRemoveListener(ofEvents().mouseReleased, this, &ofxDukBindings::onMouseEvent);
+//    ofRemoveListener(ofEvents().mouseEntered, this, &ofxDukBindings::onMouseEvent);
+//    ofRemoveListener(ofEvents().mouseExited, this, &ofxDukBindings::onMouseEvent);
+//    ofRemoveListener(ofEvents().mouseDragged, this, &ofxDukBindings::onMouseEvent);
+//    ofRemoveListener(ofEvents().mouseScrolled, this, &ofxDukBindings::onMouseEvent);
+//
+//    ofRemoveListener(ofEvents().keyPressed, this, &ofxDukBindings::onKeyEvent);
+//    ofRemoveListener(ofEvents().keyReleased, this, &ofxDukBindings::onKeyEvent);
+//
+//    ofRemoveListener(ofEvents().fileDragEvent, this, &ofxDukBindings::onDragEvent);
+//    ofRemoveListener(ofEvents().messageEvent, this, &ofxDukBindings::onMessageEvent);
 }
 
 void ofxDukBindings::onDraw(ofEventArgs &ev) {
