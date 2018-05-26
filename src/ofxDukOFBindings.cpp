@@ -729,6 +729,50 @@ ofxDukBindings& ofxDukBindings::setup(ofxDuktape& duk) {
                                       duk.getNumber(2)));
             return 1;
         }, 3},
+        {"translate", [](ofxDuktape& duk) {
+            switch (duk.getTop()-2) {
+                case 3:
+                    ofTranslate(duk.getNumber(0),
+                                duk.getNumber(1),
+                                duk.getNumber(2));
+                    break;
+                case 2:
+                    ofTranslate(duk.getNumber(0),
+                                duk.getNumber(1));
+                    break;
+                default:
+                    return DUK_ERR_SYNTAX_ERROR;
+            }
+            return 0;
+        }, DUK_VARARGS},
+        {"scale", [](ofxDuktape& duk) {
+            switch (duk.getTop()-2) {
+                case 3:
+                    ofScale(duk.getNumber(0),
+                            duk.getNumber(1),
+                            duk.getNumber(2));
+                    break;
+                case 2:
+                    ofScale(duk.getNumber(0),
+                            duk.getNumber(1));
+                    break;
+                default:
+                    return DUK_ERR_SYNTAX_ERROR;
+            }
+            return 0;
+        }, DUK_VARARGS},
+        {"rotate", [](ofxDuktape& duk) {
+            ofRotateRad(duk.getNumber(0));
+            return 0;
+        }, 1},
+        {"pushMatrix", [](ofxDuktape& duk) {
+            ofPushMatrix();
+            return 0;
+        }, 0},
+        {"popMatrix", [](ofxDuktape& duk) {
+            ofPopMatrix();
+            return 0;
+        }, 0},
         {"drawBox", [](ofxDuktape& duk) {
             ofDrawBox(duk.getNumber(0),
                       duk.getNumber(1),
