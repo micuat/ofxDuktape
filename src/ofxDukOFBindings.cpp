@@ -389,7 +389,7 @@ ofxDukBindings& ofxDukBindings::setup(ofxDuktape& duk) {
         {"MATRIX_PROJECTION", OF_MATRIX_PROJECTION},
         {"MATRIX_TEXTURE", OF_MATRIX_TEXTURE},
         
-        {"KEY_MODIFIER",  OF_KEY_MODIFIER},
+        // {"KEY_MODIFIER",  OF_KEY_MODIFIER},
         {"KEY_RETURN",    OF_KEY_RETURN},
         {"KEY_ESC",       OF_KEY_ESC},
         {"KEY_TAB",       OF_KEY_TAB},
@@ -495,8 +495,8 @@ ofxDukBindings& ofxDukBindings::setup(ofxDuktape& duk) {
         {"LOG_ERROR",   OF_LOG_ERROR},
         {"LOG_FATAL_ERROR", OF_LOG_FATAL_ERROR},
         
-        {"ENCODING_UTF8",        OF_ENCODING_UTF8},
-        {"ENCODING_ISO_8859_15", OF_ENCODING_ISO_8859_15},
+        // {"ENCODING_UTF8",        OF_ENCODING_UTF8},
+        // {"ENCODING_ISO_8859_15", OF_ENCODING_ISO_8859_15},
         
     });
     
