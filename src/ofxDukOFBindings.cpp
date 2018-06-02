@@ -793,6 +793,21 @@ ofxDukBindings& ofxDukBindings::setup(ofxDuktape& duk) {
             ofVertex(duk.getNumber(0), duk.getNumber(1), duk.getNumber(2));
             return 0;
         }, 3},
+        {"setColor", [](ofxDuktape& duk) {
+            switch (duk.getTop()-2) {
+                case 3:
+                    ofSetColor(duk.getNumber(0),
+                               duk.getNumber(1),
+                               duk.getNumber(2));
+                    break;
+                case 1:
+                    ofSetColor(duk.getNumber(0));
+                    break;
+                default:
+                    return DUK_ERR_SYNTAX_ERROR;
+            }
+            return 0;
+        }, DUK_VARARGS},
         {"drawBox", [](ofxDuktape& duk) {
             ofDrawBox(duk.getNumber(0),
                       duk.getNumber(1),
