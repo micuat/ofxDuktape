@@ -773,6 +773,26 @@ ofxDukBindings& ofxDukBindings::setup(ofxDuktape& duk) {
             ofPopMatrix();
             return 0;
         }, 0},
+        {"fill", [](ofxDuktape& duk) {
+            ofFill();
+            return 0;
+        }, 0},
+        {"noFill", [](ofxDuktape& duk) {
+            ofNoFill();
+            return 0;
+        }, 0},
+        {"beginShape", [](ofxDuktape& duk) {
+            ofBeginShape();
+            return 0;
+        }, 0},
+        {"endShape", [](ofxDuktape& duk) {
+            ofEndShape();
+            return 0;
+        }, 0},
+        {"vertex", [](ofxDuktape& duk) {
+            ofVertex(duk.getNumber(0), duk.getNumber(1), duk.getNumber(2));
+            return 0;
+        }, 3},
         {"drawBox", [](ofxDuktape& duk) {
             ofDrawBox(duk.getNumber(0),
                       duk.getNumber(1),
