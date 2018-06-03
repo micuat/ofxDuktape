@@ -795,10 +795,20 @@ ofxDukBindings& ofxDukBindings::setup(ofxDuktape& duk) {
         }, 3},
         {"setColor", [](ofxDuktape& duk) {
             switch (duk.getTop()-2) {
+                case 4:
+                    ofSetColor(duk.getNumber(0),
+                               duk.getNumber(1),
+                               duk.getNumber(2),
+                               duk.getNumber(3));
+                    break;
                 case 3:
                     ofSetColor(duk.getNumber(0),
                                duk.getNumber(1),
                                duk.getNumber(2));
+                    break;
+                case 2:
+                    ofSetColor(duk.getNumber(0),
+                               duk.getNumber(1));
                     break;
                 case 1:
                     ofSetColor(duk.getNumber(0));
