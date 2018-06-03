@@ -818,6 +818,24 @@ ofxDukBindings& ofxDukBindings::setup(ofxDuktape& duk) {
             }
             return 0;
         }, DUK_VARARGS},
+        {"drawCircle", [](ofxDuktape& duk) {
+            switch (duk.getTop()-2) {
+                case 4:
+                    ofDrawCircle(duk.getNumber(0),
+                                 duk.getNumber(1),
+                                 duk.getNumber(2),
+                                 duk.getNumber(3));
+                    break;
+                case 3:
+                    ofDrawCircle(duk.getNumber(0),
+                                 duk.getNumber(1),
+                                 duk.getNumber(2));
+                    break;
+                default:
+                    return DUK_ERR_SYNTAX_ERROR;
+            }
+            return 0;
+        }, DUK_VARARGS},
         {"drawBox", [](ofxDuktape& duk) {
             ofDrawBox(duk.getNumber(0),
                       duk.getNumber(1),
