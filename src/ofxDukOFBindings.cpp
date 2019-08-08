@@ -765,6 +765,18 @@ ofxDukBindings& ofxDukBindings::setup(ofxDuktape& duk) {
             ofRotateRad(duk.getNumber(0));
             return 0;
         }, 1},
+        {"rotateX", [](ofxDuktape& duk) {
+            ofRotateXRad(duk.getNumber(0));
+            return 0;
+        }, 1},
+        {"rotateY", [](ofxDuktape& duk) {
+            ofRotateYRad(duk.getNumber(0));
+            return 0;
+        }, 1},
+        {"rotateZ", [](ofxDuktape& duk) {
+            ofRotateZRad(duk.getNumber(0));
+            return 0;
+        }, 1},
         {"pushMatrix", [](ofxDuktape& duk) {
             ofPushMatrix();
             return 0;
